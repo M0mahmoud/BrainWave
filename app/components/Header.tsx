@@ -43,10 +43,9 @@ const Header = () => {
         </a>
 
         <nav
-          className={`
-            ${OpenNav ? "flex" : "hidden"}
-            fixed top-[5rem] left-0 bottom-0 bg-n-8  lg:static lg:flex lg:mx-auto lg:bg-transparent
-            `}
+          className={`${
+            OpenNav ? "flex" : "hidden"
+          } fixed top-[5rem] left-0 bottom-0 bg-n-8  lg:static lg:flex lg:mx-auto lg:bg-transparent w-full `}
         >
           <div className="relative flex flex-col items-center justify-center m-auto z-2 lg:flex-row">
             {navigation.map((item) => (

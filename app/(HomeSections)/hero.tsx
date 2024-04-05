@@ -21,12 +21,13 @@ export default function Hero() {
             Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
             <span className="relative inline-block">
               Brainwave{" "}
-              <img
+              <Image
                 src="/curve.png"
                 className="absolute left-0 w-full top-full xl:-mt-2"
                 width={624}
                 height={28}
                 alt="Curve"
+                loading="lazy"
               />
             </span>
           </h1>

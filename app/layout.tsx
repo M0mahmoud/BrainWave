@@ -1,11 +1,12 @@
 import ButtonGradient from "./design/svg/ButtonGradient";
 
 import { Viewport } from "next";
-import { Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import "./globals.css";
 
-const sora = Sora({ subsets: ["latin"] });
+// const sora = Sora({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Brain Wave",
@@ -22,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sora.className + "pt-[4.75rem] lg:pt-[5.25rem]"}>
+      <body className={inter.className}>
         <Header />
         {children}
         <ButtonGradient />
