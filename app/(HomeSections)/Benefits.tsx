@@ -34,6 +34,7 @@ export default function Benefits() {
                     width={48}
                     height={48}
                     alt={item.title}
+                    loading="lazy"
                   />
                   <Link
                     href={"/"}
@@ -54,11 +55,12 @@ export default function Benefits() {
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-15">
                   {item.imageUrl && (
                     <Image
-                      src={item.imageUrl}
+                      src={item.imageUrl.src}
                       width={380}
                       height={362}
                       alt={item.title}
                       className="object-cover w-full h-full"
+                      loading="lazy"
                     />
                   )}
                 </div>

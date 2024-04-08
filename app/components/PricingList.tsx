@@ -42,7 +42,13 @@ const PricingList = () => {
                 key={index}
                 className="flex items-start py-5 border-t border-n-6"
               >
-                <Image src={check.src} width={24} height={24} alt="Check" />
+                <Image
+                  src={check.src}
+                  width={24}
+                  height={24}
+                  alt="Check"
+                  loading="lazy"
+                />
                 <p className="ml-4 body-2">{feature}</p>
               </li>
             ))}

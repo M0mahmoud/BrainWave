@@ -17,7 +17,13 @@ export default function Collaboration() {
             {collabContent.map((item) => (
               <li className="py-3 mb-3" key={item.id}>
                 <div className="flex items-center">
-                  <Image src={check.src} width={24} height={24} alt="check" />
+                  <Image
+                    src={check.src}
+                    width={24}
+                    height={24}
+                    alt="check"
+                    loading="lazy"
+                  />
                   <h6 className="ml-5 body-2">{item.title}</h6>
                 </div>
                 {item.text && (
@@ -36,14 +42,15 @@ export default function Collaboration() {
           </p>
 
           <div className="relative left-1/2 flex w-full sm:w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
-            <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
+            <div className="flex m-auto border rounded-full w-60 aspect-square border-n-6">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
-                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                <div className="flex items-center justify-center w-full h-full rounded-full bg-n-8">
                   <Image
                     src={brainwaveWhiteSymbol.src}
                     width={48}
                     height={48}
                     alt="brainwave"
+                    loading="lazy"
                   />
                 </div>
               </div>

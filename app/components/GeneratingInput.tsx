@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { loading } from "../assets";
 
 const GeneratingInput = ({ className }: { className: string }) => {
   return (
@@ -9,11 +10,12 @@ const GeneratingInput = ({ className }: { className: string }) => {
       } text-base`}
     >
       <Image
-        src="/loading.png"
+        src={loading.src}
         alt="loading"
         className="w-5 h-5 mr-5"
         width={20}
         height={20}
+        loading="lazy"
       />
       AI Is Generating...
     </div>

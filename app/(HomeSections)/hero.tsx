@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { curve, heroBackground, robot } from "../assets";
 import CompanyLogos from "../components/CompanyLogos";
 import GeneratingInput from "../components/GeneratingInput";
 import Section from "../components/Section";
@@ -22,7 +23,7 @@ export default function Hero() {
             <span className="relative inline-block">
               Brainwave{" "}
               <Image
-                src="/curve.png"
+                src={curve.src}
                 className="absolute left-0 w-full top-full xl:-mt-2"
                 width={624}
                 height={28}
@@ -51,7 +52,7 @@ export default function Hero() {
                   width={1024}
                   height={490}
                   alt="Robot Image"
-                  src={"/robot.jpg"}
+                  src={robot.src}
                   className="w-full scale-150 translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                 />
 
@@ -68,7 +69,8 @@ export default function Hero() {
               className="object-cover w-full"
               width={1440}
               height={1800}
-              src="/hero-background.jpg"
+              loading="lazy"
+              src={heroBackground.src}
             />
           </div>
           <BackgroundCircles parallaxRef={undefined} />

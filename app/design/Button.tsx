@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { ReactNode } from "react";
 import ButtonSvg from "./svg/ButtonSvg";
 
@@ -29,10 +30,10 @@ const Button = ({
   );
 
   const LinkContent = () => (
-    <a href={href} className={classes}>
+    <Link href={String(href)} className={classes}>
       <span className={spanClasses}>{children}</span>
       {ButtonSvg(white)}
-    </a>
+    </Link>
   );
 
   return href ? LinkContent() : ButtonContent();
