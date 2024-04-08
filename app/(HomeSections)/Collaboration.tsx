@@ -1,15 +1,82 @@
+import Image from "next/image";
+import { brainwaveWhiteSymbol, check } from "../assets";
 import Section from "../components/Section";
-
-export default function Hero() {
+import { collabApps, collabContent, collabText } from "../constants";
+import Button from "../design/Button";
+export default function Collaboration() {
+  console.log("check:", check);
   return (
-    <Section
-      id="collaboration"
-      className="pt-48 -mt-20"
-      crosses
-      customPaddings
-      crossesOffset="lg:translate-y-20"
-    >
-      <div className="min-h-svh"></div>
+    <Section id="collaboration" crosses>
+      <div className="container lg:flex">
+        <div className="max-w-96 md:mb-8">
+          <h2 className="mb-4 h2 md:mb-8">
+            AI Chat App for seamless collaboration
+          </h2>
+
+          <ul className="max-w-[22rem] mb-10 md:mb-14">
+            {collabContent.map((item) => (
+              <li className="py-3 mb-3" key={item.id}>
+                <div className="flex items-center">
+                  <img src={check.src} width={24} height={24} alt="check" />
+                  <h6 className="ml-5 body-2">{item.title}</h6>
+                </div>
+                {item.text && (
+                  <p className="mt-3 body-2 text-n-4">{item.text}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <Button>Try it now</Button>
+        </div>
+
+        <div className="lg:ml-auto xl:w-[38rem] mt-4 p-4 md:p-0 ">
+          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+            {collabText}
+          </p>
+
+          <div className="relative left-1/2 flex w-full sm:w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+            <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
+              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                  <img
+                    src={brainwaveWhiteSymbol.src}
+                    width={48}
+                    height={48}
+                    alt="brainwave"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <ul>
+              {collabApps.map((app, index) => (
+                <li
+                  key={app.id}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
+                    index * 45
+                  }`}
+                >
+                  <div
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                      index * 45
+                    }`}
+                  >
+                    <Image
+                      className="m-auto"
+                      width={app.width}
+                      height={app.height}
+                      alt={app.title}
+                      src={app.icon.src}
+                      loading="lazy"
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     </Section>
   );
 }
