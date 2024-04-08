@@ -24,11 +24,11 @@ const Heading = ({ className, title, text, tag }: Props) => {
 
 export default Heading;
 
-const TagLine = ({
+export const TagLine = ({
   className,
   children,
 }: {
-  className: string;
+  className?: string;
   children: string;
 }) => {
   return (

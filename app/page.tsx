@@ -2,6 +2,7 @@ import Benefits from "./(HomeSections)/Benefits";
 import Collaboration from "./(HomeSections)/Collaboration";
 import Hero from "./(HomeSections)/hero";
 import Pricing from "./(HomeSections)/Pricing";
+import Roadmap from "./(HomeSections)/Roadmap";
 import Services from "./(HomeSections)/Services";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Collaboration />
       <Services />
       <Pricing />
+      <Roadmap />
     </div>
   );
 }
