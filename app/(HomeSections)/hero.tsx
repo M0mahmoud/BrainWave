@@ -16,7 +16,7 @@ export default function Hero() {
       crossesOffset="lg:translate-y-20"
     >
       <div className="container relative overflow-hidden">
-        <div className="relative max-w-5xl text-center z-1 max-auto mb-15 md:mb-20 lg:mb-24">
+        <div className="relative max-w-5xl mx-auto text-center z-1 max-auto mb-15 md:mb-20 lg:mb-24">
           <h1 className="mb-6 h1">
             Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
             <span className="relative inline-block">
