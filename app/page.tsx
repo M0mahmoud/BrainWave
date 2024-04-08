@@ -1,5 +1,6 @@
 import Benefits from "./(HomeSections)/Benefits";
 import Collaboration from "./(HomeSections)/Collaboration";
+import Services from "./(HomeSections)/Services";
 import Hero from "./(HomeSections)/hero";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <Collaboration />
+      <Services />
     </div>
   );
 }
