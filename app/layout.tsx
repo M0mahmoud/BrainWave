@@ -2,6 +2,7 @@ import ButtonGradient from "./design/svg/ButtonGradient";
 
 import { Viewport } from "next";
 import { Inter } from "next/font/google";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
         <ButtonGradient />
       </body>
     </html>
