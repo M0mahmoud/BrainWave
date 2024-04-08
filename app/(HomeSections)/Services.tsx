@@ -40,11 +40,12 @@ export default function Services() {
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
                   >
-                    <img
+                    <Image
                       width={24}
                       height={24}
                       src={check.src}
                       loading="lazy"
+                      alt="Check"
                     />
                     <p className="ml-4">{item}</p>
                   </li>
@@ -85,7 +86,7 @@ export default function Services() {
                   engine. What will you create?
                 </p>
 
-                <div className="flex items-center justify-between">
+                <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
                       key={index}
@@ -112,7 +113,7 @@ export default function Services() {
                       </div>
                     </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
               <div className="relative h-80 bg-n-8 rounded-xl overflow-hidden md:h-96">
