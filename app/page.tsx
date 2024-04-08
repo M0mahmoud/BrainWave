@@ -1,7 +1,8 @@
 import Benefits from "./(HomeSections)/Benefits";
 import Collaboration from "./(HomeSections)/Collaboration";
-import Services from "./(HomeSections)/Services";
 import Hero from "./(HomeSections)/hero";
+import Pricing from "./(HomeSections)/Pricing";
+import Services from "./(HomeSections)/Services";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Benefits />
       <Collaboration />
       <Services />
+      <Pricing />
     </div>
   );
 }
